@@ -1,0 +1,55 @@
+.banner {
+  margin-top: 50px;
+
+  &-wrap {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 12px;
+    background-image: url("/images/coffe-banner2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+
+    @media screen and (max-width: 570px) {
+      background-image: url("/images/coffe-banner.jpg");
+    }
+  }
+
+  &-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+
+    @media screen and (max-width: 660px) {
+      font-size: 32px;
+    }
+
+    @media screen and (max-width: 575px) {
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 427px) {
+      font-size: 22px;
+    }
+  }
+
+  &-menu-btn {
+    padding: 8px 30px;
+    border-radius: 6px;
+    background-color: #e69419;
+    color: white;
+    border: 1px solid #e69419;
+    transition: all .2s ease-in-out;
+  }
+
+  &-menu-btn:hover {
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,18 @@
+// global style
+@import "./global/_native.scss";
+
+// layout
+@import "./layout/_header.scss";
+@import "./layout/_footer.scss";
+
+// components style
+@import "./components/_banner.scss";
+@import "./components/_menu.scss";
+
+// pages
+@import "./pages/_cofe.scss";
+@import "./pages/_shoppingCart.scss";
+@import "./pages/_location.scss";
+
+// features
+@import "./features/_all.scss";

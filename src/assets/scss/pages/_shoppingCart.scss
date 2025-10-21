@@ -1,0 +1,140 @@
+.shopping {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  &-wrap {
+    display: flex;
+    gap: 30px;
+
+    @media screen and (max-width: 840px) {
+      flex-direction: column;
+    }
+  }
+
+  &-left {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media screen and (max-width: 840px) {
+      width: 100%;
+    }
+  }
+
+  &-right {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (max-width: 840px) {
+      width: 500px;
+      margin-bottom: 50px;
+    }
+
+    @media screen and (max-width: 764px){
+        margin-bottom: 150px;
+    }
+
+    @media screen and (max-width: 570px) {
+      width: 100%;
+    }
+  }
+
+  &-menu-none {
+    @media screen and (max-width: 570px) {
+      display: none;
+    }
+  }
+
+  &-right-title {
+    font-size: 24px;
+  }
+
+  &-right-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &-right-cards-item {
+    width: 100%;
+    padding: 24px;
+    box-shadow: 1px 1px 10px #999;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &-right-cards-item-title {
+    font-weight: 600;
+    color: #525252;
+  }
+
+  &-right-cards-item-num {
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  &-right-cards-item-chart,
+  &-right-cards-item-chart2,
+  &-right-cards-item-chart3 {
+    width: 100%;
+    border-radius: 30px;
+    height: 5px;
+    background-color: #4494e4;
+  }
+
+  &-right-cards-item-chart2 {
+    width: 70%;
+    background-color: #22c55e;
+  }
+
+  &-right-cards-item-chart3 {
+    width: 30%;
+    background-color: #ef4444;
+  }
+
+  &-menu {
+    display: none;
+
+    @media screen and (max-width: 570px) {
+      display: block;
+      display: flex;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 485px) {
+      font-size: 12px;
+    }
+
+    @media screen and (max-width: 438px) {
+      font-size: 10px;
+    }
+
+    @media screen and (max-width: 392px) {
+      font-size: 9px;
+      font-weight: 400;
+    }
+  }
+
+  &-menu-page {
+    cursor: pointer;
+    padding: 8px 12px;
+    background-color: #e69419;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 600;
+    border: 2px solid #e69419;
+    transition: all 0.1s ease-in-out;
+  }
+
+  &-menu-page:hover {
+    background-color: transparent;
+    color: black;
+  }
+}

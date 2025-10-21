@@ -1,0 +1,91 @@
+.header {
+  padding: 14px 0;
+  
+  &-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-logo {
+    @media screen and (max-width: 764px) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @media screen and (max-width: 500px){
+      font-size: 14px;
+    }
+  }
+
+  &-nav {
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+    font-weight: 500;
+
+    @media screen and (max-width: 764px) {
+      display: none;
+    }
+  }
+
+  &-nav-link:hover {
+    color: #e69419;
+    transition: all 0.1s ease-in-out;
+  }
+
+  //   header-responsive
+
+  &-menu {
+    width: 100%;
+    border-top: 2px solid #e2e1dd;
+    padding: 14px 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: none;
+    background-color: white;
+    z-index: 1;
+
+    @media screen and (max-width: 764px) {
+      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+  }
+
+  &-menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    svg {
+      transition: color 0.2s ease;
+    }
+
+    &.active {
+      color: #e69419;
+
+      svg {
+        color: #e69419;
+      }
+    }
+  }
+
+  &-menu-item-title {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &-shopping-icon {
+    display: none;
+
+    @media screen and (max-width: 764px){
+      display: block;
+    }
+  }
+}
