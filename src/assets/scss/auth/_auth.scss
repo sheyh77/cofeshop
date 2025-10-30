@@ -1,0 +1,101 @@
+// login styles
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #101f22;
+  height: 100%;
+
+  &-page {
+    width: 350px;
+    padding: 12px;
+    border: 1px solid #273636;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (max-width: 450px){
+        width: 300px;
+    }
+  }
+
+  &-register {
+    display: flex;
+    background-color: #1c2a2c;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 6px;
+  }
+
+  &-register-link {
+    width: 50%;
+  }
+
+  &-register-btn {
+    width: 100%;
+    padding: 12px;
+    color: #babfbf;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    
+    @media screen and (max-width: 450px){
+        font-size: 12px;
+        padding: 12px 0;
+    }
+  }
+
+  &-register-btn.active {
+    background: linear-gradient(150deg, #0dccf2, #184a52);
+    box-shadow: 0 0 10px #0dccf2;
+    color: white;
+    transform: scale(1.02);
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+  }
+
+  &-form-title {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  &-register-inp {
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background-color: #1c2a2c;
+    color: white;
+    letter-spacing: 1px;
+  }
+
+  &-btn {
+    padding: 12px;
+    background-color: #0dccf2;
+    border-radius: 12px;
+    font-weight: 600;
+  }
+
+  &-desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  &-desc-hr {
+    width: 35%;
+    height: 2px;
+    background-color: #1f2e2f;
+  }
+
+  &-sub {
+    font-size: 12px;
+  }
+}

@@ -1,4 +1,4 @@
-import { Coffee, CupSoda, Flame, Home, ShoppingCart } from "lucide-react";
+import { Coffee, CupSoda, Flame, Home, ShoppingCart, User } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
@@ -9,6 +9,7 @@ export default function Header() {
     { path: "/cofe", icon: <Coffee size={26} />, label: "Coffee" },
     { path: "/desert", icon: <CupSoda size={26} />, label: "Dessert" },
     { path: "/tea", icon: <Flame size={24} />, label: "Tea" },
+    { path: "/login", icon: <User size={24} />, label: "Profile" },
   ];
   return (
     <header className="header">
@@ -34,6 +35,12 @@ export default function Header() {
             </Link>
             <Link to="/shopping">
               <ShoppingCart />
+            </Link>
+            <Link to="/login">
+              <button className="header-login-btn">Kirish</button>
+            </Link>
+            <Link to="/register">
+              <button className="header-login-btn">Ro'yhatdan o'tish</button>
             </Link>
           </nav>
 

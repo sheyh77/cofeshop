@@ -1,0 +1,33 @@
+.cofe {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &-title {
+        font-size: 36px;
+    }
+
+    &-cards {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    &-cards-item-desc {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &-cards-item-desc-title {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &-cards-item-desc-price {
+        font-size: 18px;
+        font-weight: 600;
+        color: #555;
+    }
+}

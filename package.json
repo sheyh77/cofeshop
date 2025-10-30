@@ -12,10 +12,12 @@
   "dependencies": {
     "@react-google-maps/api": "^2.20.7",
     "antd": "^5.27.5",
+    "axios": "^1.13.1",
     "lucide-react": "^0.546.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.4",
+    "recharts": "^3.3.0",
     "sass": "^1.92.1"
   },
   "devDependencies": {

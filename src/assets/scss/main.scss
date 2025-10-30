@@ -13,6 +13,14 @@
 @import "./pages/_cofe.scss";
 @import "./pages/_shoppingCart.scss";
 @import "./pages/_location.scss";
+@import "./pages/_about.scss";
+@import "./pages/_contact.scss";
 
 // features
 @import "./features/_all.scss";
+
+// admin panel styles
+@import "../../admin/assets/scss/admin.scss";
+
+// auth styles
+@import "./auth/_auth.scss";

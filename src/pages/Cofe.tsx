@@ -1,31 +1,22 @@
 import { useEffect, useState } from "react";
 import Header from "../layout/Header";
-import { Button, Input, Modal, Select, message } from "antd";
+import { Button, Input, message, Modal, Select } from "antd";
 import { useCart } from "../context/CartContext";
 
-export default function Tea() {
-  interface Post {
-    id: number;
-    title: string;
-    image: string;
-    description: string;
-    price: string;
-  }
+interface Post {
+  id: number;
+  title: string;
+  image: string;
+  description: string;
+  price: string;
+}
 
-  const posts: Post[] = [];
-  const [cofe, setCofe] = useState(posts);
+export default function Cofe() {
+  const { addToCart } = useCart();
   const [selectItem, setSelectItem] = useState<Post | null>(null);
   const [open, setOpen] = useState(false);
   const [deliveryType, setDeliveryType] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
-  const { addToCart } = useCart();
-
-  useEffect(() => {
-    fetch("https://34df94e0332d52dc.mokky.dev/cofe")
-      .then((res) => res.json())
-      .then((data) => setCofe(data))
-      .catch((err) => console.log(err, "Xato"));
-  }, []);
 
   const handleOpen = (item: Post) => {
     setSelectItem(item);
@@ -51,6 +42,14 @@ export default function Tea() {
     );
     handleClose();
   };
+  const [cofe, setCofe] = useState<Post[]>([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/products/coffee")
+      .then((res) => res.json())
+      .then((data) => setCofe(data))
+      .catch((err) => console.log(err, "Xato"));
+  }, []);
 
   return (
     <section className="cofe">
@@ -58,16 +57,16 @@ export default function Tea() {
       <div className="cantainer">
         <div className="cofe-wrap">
           <div className="cofe-title">
-            <p>Tea</p>
+            <p>Coffe</p>
           </div>
           <div className="cofe-card">
             {cofe.length === 0 ? (
-              <p>Hozircha hech narsa yoq</p>
+              <p>Hozircha hech narsa yo‘q</p>
             ) : (
               cofe.map((item) => (
                 <div className="cofe-card-item" key={item.id}>
                   <div className="cofe-card-item-img">
-                    <img src={item.image} alt="cofe-image" />
+                    <img src={`http://localhost:5000${item.image}`} alt="cofe-image" />
                     <button
                       className="cofe-card-item-btn"
                       onClick={() => handleOpen(item)}
@@ -80,7 +79,7 @@ export default function Tea() {
                       {item.title}
                     </div>
                     <div className="cofe-card-item-desc-price">
-                      ${item.price}
+                      {item.price} so'm
                     </div>
                   </div>
                 </div>
@@ -100,7 +99,7 @@ export default function Tea() {
         {selectItem && (
           <div>
             <img
-              src={selectItem.image}
+              src={`http://localhost:5000${selectItem.image}`}
               alt={selectItem.title}
               style={{ width: "100%", borderRadius: "10px" }}
             />
@@ -109,7 +108,7 @@ export default function Tea() {
               {selectItem.description || "Tavsif mavjud emas"}
             </p>
 
-            <h3 className="text-lg font-semibold mt-3">${selectItem.price}</h3>
+            <h3 className="text-lg font-semibold mt-3">{selectItem.price} so'm</h3>
 
             <div className="mt-4 cofe-tanlang">
               <label className="font-medium">Buyurtma turi:</label>

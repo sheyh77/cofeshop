@@ -15,21 +15,21 @@ export default function Menu() {
   const [dessert, setDessert] = useState(posts);
 
   useEffect(() => {
-    fetch("https://34df94e0332d52dc.mokky.dev/cofe")
+    fetch("http://localhost:5000/api/products/coffee")
       .then((res) => res.json())
       .then((data) => setCofe(data))
       .catch((err) => console.log(err, "Xato"));
   }, []);
 
   useEffect(() => {
-    fetch("https://34df94e0332d52dc.mokky.dev/tea")
+    fetch("http://localhost:5000/api/products/tea")
       .then((res) => res.json())
       .then((data) => setTea(data))
       .catch((err) => console.log(err, "Xato"));
   }, []);
 
   useEffect(() => {
-    fetch("https://34df94e0332d52dc.mokky.dev/desert")
+    fetch("http://localhost:5000/api/products/dessert")
       .then((res) => res.json())
       .then((data) => setDessert(data))
       .catch((err) => console.log(err, "Xato"));
@@ -71,7 +71,7 @@ export default function Menu() {
                   cofe.map((item) => (
                     <div className="menu-cards-item" key={item.id}>
                       <div className="menu-cards-item-img">
-                        <img src={item.image} alt="cappunico" />
+                        <img src={`http://localhost:5000${item.image}`} alt="cappunico" />
                       </div>
                       <div className="menu-cards-item-desc">
                         <p className="menu-cards-item-desc-title">
@@ -94,7 +94,7 @@ export default function Menu() {
                   tea.map((item) => (
                     <div className="menu-cards-item" key={item.id}>
                       <div className="menu-cards-item-img">
-                        <img src={item.image} alt="cappunico" />
+                        <img src={`http://localhost:5000${item.image}`} alt="cappunico" />
                       </div>
                       <div className="menu-cards-item-desc">
                         <p className="menu-cards-item-desc-title">
@@ -117,7 +117,7 @@ export default function Menu() {
                   dessert.map((item) => (
                     <div className="menu-cards-item" key={item.id}>
                       <div className="menu-cards-item-img">
-                        <img src={item.image} alt="cappunico" />
+                        <img src={`http://localhost:5000${item.image}`} alt="cappunico" />
                       </div>
                       <div className="menu-cards-item-desc">
                         <p className="menu-cards-item-desc-title">
