@@ -38,6 +38,8 @@ export default function Tea() {
     setIsModalOpen(true);
   };
 
+  selectedProduct
+
   // Modalni yopish
   const handleClose = () => {
     setIsModalOpen(false);

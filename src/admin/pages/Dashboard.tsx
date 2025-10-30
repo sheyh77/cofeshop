@@ -26,7 +26,7 @@ interface ReportData {
 }
 
 export default function Dashboard() {
-  const [price, setPrice] = useState<Product[]>(() => {
+  const [price] = useState<Product[]>(() => {
     const saved = localStorage.getItem("cart");
     return saved ? JSON.parse(saved) : [];
   });

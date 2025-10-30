@@ -22,6 +22,7 @@ export default function Dessert() {
     description: "",
     price: "",
   });
+  const select = selectedProduct
 
   // Ma'lumotlarni olish
   useEffect(() => {
@@ -76,6 +77,8 @@ export default function Dessert() {
       await fetch(`https://34df94e0332d52dc.mokky.dev/desert/${id}`, {
         method: "DELETE",
       });
+
+      select
 
       const updated = cofe.filter((item) => item.id !== id);
       setCofe(updated);
