@@ -18,7 +18,7 @@ export default function Register() {
         password,
       });
       alert("Ro‘yxatdan o‘tish muvaffaqiyatli ✅");
-      window.location.href = "/login";
+      window.location.href = "/";
     } catch (err: any) {
       alert(err.response?.data?.message || "Xatolik yuz berdi");
     }
