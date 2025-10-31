@@ -12,7 +12,7 @@ export default function Register() {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/auth/register", {
+      await axios.post("https://backendcofe-production.up.railway.app/api/auth/register", {
         username,
         phone,
         password,

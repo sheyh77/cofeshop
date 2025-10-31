@@ -45,7 +45,7 @@ export default function Tea() {
   const [cofe, setCofe] = useState<Post[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/products/tea")
+    fetch("https://backendcofe-production.up.railway.app/api/products/tea")
       .then((res) => res.json())
       .then((data) => setCofe(data))
       .catch((err) => console.log(err, "Xato"));

@@ -26,7 +26,7 @@ export default function Dessert() {
 
   // Ma'lumotlarni olish
   useEffect(() => {
-    fetch("https://34df94e0332d52dc.mokky.dev/desert")
+    fetch("https://backendcofe-production.up.railway.app/desert")
       .then((res) => res.json())
       .then((data) => setCofe(data))
       .catch((err) => console.log(err, "Xato"));
@@ -51,7 +51,7 @@ export default function Dessert() {
 
     try {
       await fetch(
-        `https://34df94e0332d52dc.mokky.dev/desert/${editedProduct.id}`,
+        `https://backendcofe-production.up.railway.app/desert/${editedProduct.id}`,
         {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
@@ -74,7 +74,7 @@ export default function Dessert() {
   // O'chirish
   const handleDelete = async (id: number) => {
     try {
-      await fetch(`https://34df94e0332d52dc.mokky.dev/desert/${id}`, {
+      await fetch(`https://backendcofe-production.up.railway.app/desert/${id}`, {
         method: "DELETE",
       });
 

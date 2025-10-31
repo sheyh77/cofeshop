@@ -17,7 +17,7 @@ export default function Coffe() {
   const [open, setOpen] = useState(false);
 
   const fetchProducts = async () => {
-    const res = await axios.get("http://localhost:5000/api/products");
+    const res = await axios.get("https://backendcofe-production.up.railway.app/api/products");
     setProducts(res.data);
   };
 
@@ -45,7 +45,7 @@ export default function Coffe() {
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 16 }}>
         {products.map((p) => (
           <div key={p._id} style={{ border: "1px solid #ddd", borderRadius: 8, padding: 12 }}>
-            <img src={`http://localhost:5000${p.image}`} alt={p.title} style={{ width: "100%", borderRadius: 8 }} />
+            <img src={`https://backendcofe-production.up.railway.app${p.image}`} alt={p.title} style={{ width: "100%", borderRadius: 8 }} />
             <h3>{p.title}</h3>
             <p>{p.price} so‘m</p>
             <small>{p.type}</small>

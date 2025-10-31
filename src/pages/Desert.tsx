@@ -46,7 +46,7 @@ export default function Desert() {
   const [cofe, setCofe] = useState(posts);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/products/dessert")
+    fetch("https://backendcofe-production.up.railway.app/api/products/dessert")
       .then((res) => res.json())
       .then((data) => setCofe(data))
       .catch((err) => console.log(err, "Xato"));

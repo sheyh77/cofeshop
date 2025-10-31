@@ -9,7 +9,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/admin-login", {
+      const res = await axios.post("https://backendcofe-production.up.railway.app/api/admin/admin-login", {
         username,
         password,
       });

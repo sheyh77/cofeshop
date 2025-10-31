@@ -45,7 +45,7 @@ export default function Cofe() {
   const [cofe, setCofe] = useState<Post[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/products/coffee")
+    fetch("https://backendcofe-production.up.railway.app/api/products/coffee")
       .then((res) => res.json())
       .then((data) => setCofe(data))
       .catch((err) => console.log(err, "Xato"));
@@ -66,7 +66,7 @@ export default function Cofe() {
               cofe.map((item) => (
                 <div className="cofe-card-item" key={item.id}>
                   <div className="cofe-card-item-img">
-                    <img src={`http://localhost:5000${item.image}`} alt="cofe-image" />
+                    <img src={`https://backendcofe-production.up.railway.app${item.image}`} alt="cofe-image" />
                     <button
                       className="cofe-card-item-btn"
                       onClick={() => handleOpen(item)}
@@ -99,7 +99,7 @@ export default function Cofe() {
         {selectItem && (
           <div>
             <img
-              src={`http://localhost:5000${selectItem.image}`}
+              src={`https://backendcofe-production.up.railway.app${selectItem.image}`}
               alt={selectItem.title}
               style={{ width: "100%", borderRadius: "10px" }}
             />

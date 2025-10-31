@@ -10,7 +10,7 @@ export default function All() {
           <div className="all-cards-item" key={item.id}>
             <div className="all-cards-item-left">
               <div className="all-cards-item-left-img">
-                <img src={`http://localhost:5000${item.image}`} alt="product-image" />
+                <img src={`https://backendcofe-production.up.railway.app${item.image}`} alt="product-image" />
               </div>
               <div className="all-cards-item-left-desc">
                 <p className="all-cards-item-desc-title">{item.title}</p>

@@ -27,7 +27,7 @@ export default function ProductModal({ open, onClose, onSuccess }: ProductModalP
       formData.append("type", values.type);
       if (file) formData.append("image", file);
 
-      await axios.post("http://localhost:5000/api/products", formData, {
+      await axios.post("https://backendcofe-production.up.railway.app/api/products", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
